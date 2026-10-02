@@ -5,6 +5,9 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestProjectStakeholders(BaseCommon):
+    # Since 20.0, BaseCommon runs as a basic internal user
+    _test_user_groups = ("project.group_project_manager",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
